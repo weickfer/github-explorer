@@ -1,5 +1,12 @@
-import React from 'react'
+import { useState } from "react"
 
 export function App() {
-  return <h1>ola</h1>
+  const [count, setCount] = useState(0)
+
+  return (
+    <div>
+      <strong>{count}?</strong>
+      <button onClick={() => setCount(count => count+1)}>add</button>
+    </div>
+  )
 }
